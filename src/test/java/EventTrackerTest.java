@@ -1,9 +1,7 @@
 import org.junit.Assert;
 import org.junit.Test;
-
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
+
 
 public class EventTrackerTest {
 
@@ -32,7 +30,7 @@ public class EventTrackerTest {
 
         eventTracker.push("test");
 
-        Assert.assertEquals(testList, eventTracker.tracker());
+        Assert.assertEquals(testList, eventTracker.getTracker());
 
     }
 

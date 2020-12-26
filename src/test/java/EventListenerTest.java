@@ -10,7 +10,6 @@ public class EventListenerTest {
     public void readToQuit() {
         TrackerMock tracker = new TrackerMock();
         EventListener el = new EventListener("test", "reply", tracker);
-
         Assert.assertTrue(el.readyToQuit());
     }
 
@@ -37,7 +36,7 @@ public class EventListenerTest {
         public boolean itemWasPushed;
         public boolean eventWasHandled;
 
-        @Override
+       // @Override
         public Map<String, Integer> tracker() {
             return null;
         }
@@ -48,7 +47,7 @@ public class EventListenerTest {
         }
 
         @Override
-        public boolean has(String message) {
+        public Boolean has(String message) {
             return true;
         }
 
